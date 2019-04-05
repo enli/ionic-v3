@@ -78,10 +78,11 @@ export class ToastCmp implements AfterViewInit {
   }
 
   ionViewDidEnter() {
-    const { activeElement }: any = document;
-    if (activeElement) {
-      activeElement.blur();
-    }
+    // enli: remove blur which causes active widgets to lose focus
+    // const { activeElement }: any = document;
+    // if (activeElement) {
+    //   activeElement.blur();
+    // }
 
     let focusableEle = this._elementRef.nativeElement.querySelector('button');
 
